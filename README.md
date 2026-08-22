@@ -1,24 +1,38 @@
 # Out of Distribution — Daily AI Risk & Security Brief
 
-A multi-agent research orchestration system that produces a daily intelligence brief on AI risk, safety, and security. Powered by Claude Code.
+A multi-agent research orchestration system that produces a daily intelligence brief on AI risk, safety, and security. Seven specialized agents run in parallel, a synthesizer finds cross-lane connections, and an editor produces a polished brief. Powered by Claude Code.
+
+```mermaid
+flowchart TD
+    R([run.sh]) --> O[Orchestrator\nCLAUDE.md]
+    O -->|Task tool — parallel dispatch| P[ ]:::spacer
+
+    P --> A0[Agent 0\nGlobal AI Overview]
+    P --> A1[Agent 1\nFrontier Topline]
+    P --> A2[Agent 2\nAI Offensive Security]
+    P --> A3[Agent 3\nLoss of Control]
+    P --> A4[Agent 4\nAgentic Ecosystem ★]
+    P --> A5[Agent 5\nCybernetic Control]
+    P --> A6[Agent 6\nAutonomous Cyber]
+
+    A0 & A1 & A2 & A3 & A4 & A5 & A6 --> S[Synthesizer\ncross-lane connections\n+ dedup + ranking]
+    S --> E[Editor\ncalibrated language\n2,200–3,800 words]
+    E --> MD[out/YYYY-MM-DD-brief.md]
+    E --> HTML[out/YYYY-MM-DD-brief.html]
+    HTML --> Mail[scripts/send_brief.py\nOutlook delivery]
+
+    classDef spacer fill:none,stroke:none
+    classDef agent fill:#1a3a50,color:#fff,stroke:#0d2035
+    classDef role fill:#0e4d6e,color:#fff,stroke:#0a3550
+    classDef output fill:#1a5276,color:#fff,stroke:#154360
+    class A0,A1,A2,A3,A4,A5,A6 agent
+    class S,E role
+    class MD,HTML,Mail output
+```
 
 ## What it does
 
-Every day, seven specialized research agents run in parallel across distinct intelligence lanes, then a synthesizer finds cross-lane connections, and an editor produces a polished brief in markdown and HTML. The whole pipeline runs inside Claude Code using the Task tool for parallel agent dispatch.
-
-```
-Agents 0-6 (parallel)
-    │
-    ▼
-Synthesizer
-    │
-    ▼
-Editor → out/YYYY-MM-DD-brief.md
-         out/YYYY-MM-DD-brief.html
-    │
-    ▼
-Email delivery (Outlook/Windows)
-```
+Every day, seven specialized research agents run in parallel across distinct intelligence lanes — each doing 15-20 web searches and fetching primary sources. A synthesizer then finds cross-lane connections and deduplicates. An editor produces a polished brief in markdown and HTML. The whole pipeline runs inside Claude Code using the Task tool for parallel agent dispatch.
 
 ## Intelligence lanes
 
