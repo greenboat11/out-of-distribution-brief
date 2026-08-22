@@ -1,0 +1,17 @@
+{
+  "last_run": null,
+  "window_hours": 24,
+  "agents_succeeded": [],
+  "item_counts": {
+    "agent_0_global": 0,
+    "agent_1_frontier": 0,
+    "agent_2_offensive": 0,
+    "agent_3_control": 0,
+    "agent_4_agentic": 0,
+    "agent_5_cybernetic": 0,
+    "agent_6_autonomous_cyber": 0
+  },
+  "headline_count": 0,
+  "crosscut_count": 0,
+  "weak_signal_count": 0
+}

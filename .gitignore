@@ -1,0 +1,30 @@
+# Environment & secrets
+.env
+*.env
+
+# Output briefs (generated content — add specific samples manually if desired)
+out/*.md
+out/*.html
+out/*.preview.html
+
+# Logs
+logs/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+dist/
+build/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
