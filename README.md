@@ -1,6 +1,6 @@
 # Out of Distribution — Daily AI Risk & Security Brief
 
-A multi-agent research orchestration system that produces a daily intelligence brief on AI risk, safety, and security. Seven specialized agents run in parallel, a synthesizer finds cross-lane connections, and an editor produces a polished brief. Powered by Claude Code.
+A multi-agent research orchestration system that produces a daily intelligence brief on AI risk, safety, and security. Seven specialized agents run in parallel, a synthesizer finds cross-lane connections, and an editor produces a polished brief. 
 
 ```mermaid
 flowchart TD
